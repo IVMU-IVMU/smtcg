@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 26);
+}
+
+h1{
+    font-size: 4vw;
+    color: aliceblue;
+    text-align:center;
+    z-index: 3;
+    text-shadow: 1vw 1vw 1vw rgb(105, 105, 105);
+}
+p{
+    font-size: 2vw;
+    color: aliceblue;
+    text-align:center;
+    z-index: 3;
+}
+.lijevo{
+    font-size: 2vw;
+    color: aliceblue;
+    text-align:left;
+    z-index: 3;
+    margin-left:10vw;
+    margin-right:10vw;
+}
+h3{
+    font-weight: normal;
+    font-size: 2vw;
+    color: aliceblue;
+    text-align:center;
+    z-index: 1;
+    position: relative;
+}
+h2{
+    font-size: 3vw;
+    color: aliceblue;
+    text-align:center;
+    z-index: 1;
+    position: relative;
+}
+.background {
+    position: relative;
+    padding: 15vw;
+    width: 70vw;
+    height: 70vw;
+    height: auto;
+    width:auto;
+    background-image: url("mjesec.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: 1;
+}
+.slikica{
+    z-index: 1;
+    width: 50vw;
+    aspect-ratio: 16 / 9;
+  object-fit: cover;
+    text-align: center;
+}
+.bojasivazasekciju{
+    padding: 2vw;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.menu-icon {
+    font-size: 5vw;
+    cursor: pointer;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    z-index: 999;
+    color: white;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background-color: rgb(39, 39, 39);
+    padding: 2vw;
+    border-radius: 4px;
+    z-index: 1000;
+
+   
+    opacity: 0;
+    transform: translateY(-1vw);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+.oznaceno{
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+    transition: color 0.2s;
+    text-weight: bold;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+    opacity: 1;
+    transform: translateY(7vw);
+    pointer-events: auto;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 1vw 0;
+    font-size: 2vw;
+    transition: color 0.2s;
+}
+.menu a:hover {
+    color: #757575;
+}
+@media (max-width: 768px) {
+
+    h1{
+        font-size: 6vw;
+        text-align: center;
+    }
+    h2{
+        font-size: 5vw;
+        text-align: center;
+    }
+    h3, p {
+        font-size: 4vw;
+        text-align: center;
+    }
+    .lijevo{
+        font-size: 4vw;
+        text-align: left;
+    }
+    .menu-icon {
+        font-size: 8vw;
+    }
+
+    .menu a {
+        font-size: 4vw;
+    }
+}
